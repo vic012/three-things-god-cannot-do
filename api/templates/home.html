@@ -1,11 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Api messages</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens Inspiradoras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer a {
+            color: #00aced;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-	<h1>Hello, please, go to /docs for more informations.</h1>
+    <div class="navbar">
+        <a href="/docs" target="_blank">Documentação</a>
+        <a href="/redoc" target="_blank">Documentação Redoc</a>
+        <a href="https://pedro.pythonanywhere.com/" target="_blank">Sobre Mim</a>
+    </div>
+    <div class="content">
+        <h1>Projeto API CRUD</h1>
+        <p>Este projeto é um API CRUD onde o usuário conseguirá criar, ler, atualizar e deletar mensagens.</p>
+    </div>
+    <div class="footer">
+        <p>Veja o projeto no <a href="https://github.com/vic012/three-things-god-cannot-do" target="_blank">GitHub</a></p>
+    </div>
 </body>
 </html>

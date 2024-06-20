@@ -7,7 +7,11 @@ from .database import engine
 
 # Base.metadata.create_all(bind=engine)
 
-app = FastAPI()
+app = FastAPI(
+    title="Mensagens inspiradoras",
+    description="Esta API permite o gerenciamento de mensagens inspiradoras",
+    version="0.0.1",
+)
 
 # Dependency
 def get_db():

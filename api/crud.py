@@ -60,3 +60,21 @@ def update_message(
 	db.refresh(db_message)
 
 	return db_message
+
+def delete_message(
+	db: Session,
+	message_id: int
+):
+
+	db_message = get_message(db=db, message_id=message_id)
+
+	if not db_message:
+		raise HTTPException(
+			status_code=HTTPStatus.NOT_FOUND,
+			detail=f"A Menssagem com o ID: {message_id} não existe"
+		)
+
+	db.delete(db_message)
+	db.commit()
+
+	return {"detail": f"A mensagem com ID: {message_id} foi deletada"}

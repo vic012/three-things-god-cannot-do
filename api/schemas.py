@@ -29,7 +29,12 @@ class MessageSchemaCreate(BaseModel):
 		from_attribute=True
 	)
 
+
 class MessageSchemaUpdate(BaseModel):
 	text_message: str
 	reference: str = "Referência"
 	active: bool = False
+
+
+class MessageInfo(BaseModel):
+	detail: str
