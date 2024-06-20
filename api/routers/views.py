@@ -58,3 +58,10 @@ def update_message(
 	session: Session = Depends(get_session)
 ):
 	return crud.update_message(session, message_id, message_data)
+
+@router.delete("/message/{message_id}", response_model=schemas.MessageInfo)
+def delete_message(
+	message_id: int,
+	session: Session = Depends(get_session)
+):
+	return crud.delete_message(session, message_id)
