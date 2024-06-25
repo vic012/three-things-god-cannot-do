@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
-from .config import get_settings
+from config import get_settings
 
 
 sqlite_url = get_settings().DATABASE_URL

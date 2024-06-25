@@ -5,11 +5,11 @@ from sqlalchemy.orm import Session
 
 from fastapi import APIRouter, Depends
 
-import api.schemas as schemas
-import api.crud as crud
-from api.database import get_session
-from api.dependencies import get_token_header
-from api.models import Message
+import schemas as schemas
+import crud as crud
+from database import get_session
+from dependencies import get_token_header
+from models import Message
 
 router = APIRouter(
 	prefix="/messages",
