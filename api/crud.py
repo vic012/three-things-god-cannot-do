@@ -5,8 +5,8 @@ from sqlalchemy.orm import Session
 
 from fastapi import HTTPException
 
-from .models import Message
-from .schemas import MessageSchemaCreate, MessageSchemaUpdate
+from models import Message
+from schemas import MessageSchemaCreate, MessageSchemaUpdate
 
 
 def get_messages(db: Session, skip: int = 0, limit: int = 100):
